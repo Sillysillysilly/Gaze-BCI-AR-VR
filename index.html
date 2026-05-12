@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eye Tracking and BCI in AR/VR | UbiComp/ISWC 2026 Workshop</title>
+  <meta name="description" content="Workshop at ACM UbiComp/ISWC 2026 on eye tracking and brain-computer interfaces in AR/VR, ubiquitous computing, wearable sensing, and adaptive interaction.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Eye Tracking and BCI in AR/VR workshop home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" role="img">
+            <path d="M5 20c4.8-7.2 9.8-10.8 15-10.8S30.2 12.8 35 20c-4.8 7.2-9.8 10.8-15 10.8S9.8 27.2 5 20Z"></path>
+            <circle cx="20" cy="20" r="5.8"></circle>
+          </svg>
+        </span>
+        <span>Gaze + BCI AR/VR</span>
+      </a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="site-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="site-menu">
+        <a href="#about">About</a>
+        <a href="#topics">Topics</a>
+        <a href="#submissions">CFP & Submit</a>
+        <a href="#dates">Dates</a>
+        <a href="#organizers">Organizers</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-ribbon" aria-label="Workshop summary">
+        <span>UbiComp/ISWC 2026 Workshop</span>
+        <span>Shanghai, China</span>
+        <span>Half-day in person</span>
+      </div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="hero-kicker">Call for Papers</p>
+          <h1 id="hero-title">Eye Tracking and Brain-Computer Interfaces in AR/VR: Progresses, Challenges and Opportunities</h1>
+          <p class="hero-lead">A UbiComp/ISWC 2026 workshop for researchers building the next generation of gaze, neural sensing, adaptive interaction, and immersive ubiquitous computing systems.</p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="Call%20for%20Papers.pdf">Read the CFP</a>
+            <a class="button button-secondary" href="https://new.precisionconference.com/user/login" target="_blank" rel="noopener">Submit via PCS</a>
+          </div>
+          <dl class="hero-facts">
+            <div>
+              <dt>Venue</dt>
+              <dd>ACM UbiComp/ISWC 2026, Shanghai, China</dd>
+            </div>
+            <div>
+              <dt>Workshop</dt>
+              <dd>October 11 or 12, 2026</dd>
+            </div>
+            <div>
+              <dt>Format</dt>
+              <dd>Half-day, in person</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-visual" aria-label="Abstract visualization of gaze, brain signals, and AR VR interaction">
+          <div class="visual-header" aria-hidden="true">
+            <span>Signal workspace</span>
+            <span>gaze / EEG / XR</span>
+          </div>
+          <svg class="signal-map" viewBox="0 0 680 580" role="img" aria-labelledby="visual-title visual-desc">
+            <title id="visual-title">Gaze and neural sensing map</title>
+            <desc id="visual-desc">An abstract AR headset, gaze field, EEG waveforms, and connected sensing nodes.</desc>
+            <defs>
+              <linearGradient id="visorGradient" x1="80" x2="610" y1="100" y2="460" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#153e6f"></stop>
+                <stop offset="0.42" stop-color="#0b8d9f"></stop>
+                <stop offset="1" stop-color="#78d56f"></stop>
+              </linearGradient>
+              <linearGradient id="lineGradient" x1="60" x2="620" y1="80" y2="520" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#ff8159"></stop>
+                <stop offset="0.5" stop-color="#11b8c7"></stop>
+                <stop offset="1" stop-color="#7fe05b"></stop>
+              </linearGradient>
+            </defs>
+
+            <path class="grid-line" d="M56 116H615M80 230H645M38 344H590M116 458H625"></path>
+            <path class="grid-line" d="M118 58V522M250 42V540M385 64V520M522 42V548"></path>
+
+            <path class="visor-shadow" d="M87 262c24-83 116-142 247-142 137 0 226 54 261 139 18 44-1 91-42 106-70 26-143 39-220 39-80 0-153-14-221-42-39-16-54-58-25-100Z"></path>
+            <path class="visor-body" d="M91 244c29-79 122-132 244-132 130 0 222 51 259 130 21 45 2 95-42 112-67 26-141 39-219 39-80 0-153-14-218-42-43-18-58-61-24-107Z"></path>
+            <path class="visor-glass" d="M146 253c29-47 94-76 187-76 94 0 159 28 191 76 13 20 5 45-17 52-50 17-108 27-174 27-65 0-121-9-171-27-23-8-30-32-16-52Z"></path>
+
+            <path class="eye-ring" d="M203 259c42-48 85-72 129-72 46 0 89 24 130 72-41 48-84 72-130 72-44 0-87-24-129-72Z"></path>
+            <circle class="eye-core" cx="333" cy="259" r="34"></circle>
+            <circle class="eye-pulse" cx="333" cy="259" r="52"></circle>
+
+            <path class="wave wave-one" d="M90 466c37 0 37-52 74-52s37 52 74 52 37-52 74-52 37 52 74 52 37-52 74-52 37 52 74 52"></path>
+            <path class="wave wave-two" d="M120 506c25 0 25-27 50-27s25 27 50 27 25-27 50-27 25 27 50 27 25-27 50-27 25 27 50 27 25-27 50-27 25 27 50 27"></path>
+
+            <g class="nodes">
+              <circle cx="118" cy="120" r="14"></circle>
+              <circle cx="560" cy="126" r="14"></circle>
+              <circle cx="612" cy="346" r="14"></circle>
+              <circle cx="78" cy="376" r="14"></circle>
+              <circle cx="414" cy="66" r="14"></circle>
+            </g>
+            <path class="node-line" d="M118 120 333 259 560 126M333 259 612 346M333 259 78 376M333 259 414 66"></path>
+
+            <g class="labels" aria-hidden="true">
+              <text x="88" y="91">gaze</text>
+              <text x="526" y="96">XR</text>
+              <text x="537" y="395">BCI</text>
+              <text x="70" y="425">EEG</text>
+            </g>
+          </svg>
+          <div class="visual-metrics" aria-hidden="true">
+            <div><span>mode</span><strong>adaptive</strong></div>
+            <div><span>focus</span><strong>real-world</strong></div>
+            <div><span>output</span><strong>agenda</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-light" id="about" aria-labelledby="about-title">
+      <div class="section-grid">
+        <div>
+          <p class="section-label">About the workshop</p>
+          <h2 id="about-title">From where people look to how systems adapt.</h2>
+        </div>
+        <div class="section-prose">
+          <p>Eye tracking and brain-computer interfaces are becoming increasingly important for ubiquitous, wearable, and immersive computing. Gaze can reveal visual attention, information needs, task strategies, and interaction intention, while brain signals can complement it with cognitive load, affective state, attention, fatigue, and neural intention.</p>
+          <p>This workshop brings together researchers and practitioners from eye tracking, BCI, HCI, ubiquitous computing, wearable computing, extended reality, physiological sensing, and human-AI interaction to discuss emerging systems, open challenges, and future directions.</p>
+        </div>
+      </div>
+      <div class="feature-strip" aria-label="Workshop objectives">
+        <article>
+          <span class="feature-number">01</span>
+          <h3>Connect communities</h3>
+          <p>Bring gaze interaction, BCI, AR/VR, wearable sensing, and ubiquitous computing researchers into one focused forum.</p>
+        </article>
+        <article>
+          <span class="feature-number">02</span>
+          <h3>Surface hard problems</h3>
+          <p>Discuss fusion, calibration, robustness, personalization, deployment, privacy, ethics, and social acceptability.</p>
+        </article>
+        <article>
+          <span class="feature-number">03</span>
+          <h3>Build an agenda</h3>
+          <p>Map future research directions for gaze-BCI interaction in everyday, mobile, wearable, and immersive contexts.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="topics" aria-labelledby="topics-title">
+      <div class="section-heading">
+        <p class="section-label">Topics of interest</p>
+        <h2 id="topics-title">Submissions may focus on eye tracking, BCI, or the combination of both.</h2>
+      </div>
+      <div class="topic-grid">
+        <article>Gaze-based interaction for ubiquitous, wearable, and AR/VR systems</article>
+        <article>Brain-computer interfaces for interaction and adaptive systems</article>
+        <article>Multimodal fusion of gaze, EEG, physiological signals, movement, and context</article>
+        <article>Attention, intention, cognitive load, fatigue, and affect recognition</article>
+        <article>Gaze-BCI interaction techniques in AR, VR, and MR</article>
+        <article>Wearable and mobile eye tracking</article>
+        <article>Lightweight, mobile, and dry-electrode EEG systems</article>
+        <article>Neuroadaptive and attention-aware interfaces</article>
+        <article>Human-AI interaction using gaze and brain signals</article>
+        <article>Collaborative and multi-user gaze/BCI systems</article>
+        <article>Accessibility and assistive applications</article>
+        <article>Healthcare, education, training, work, and smart environments</article>
+        <article>Datasets, benchmarks, toolkits, and evaluation methods</article>
+        <article>Robustness, calibration, personalization, and long-term deployment</article>
+        <article>Privacy, ethics, social acceptability, and responsible use of gaze and neural data</article>
+        <article>Critical, speculative, and design-oriented perspectives on gaze and BCI</article>
+      </div>
+    </section>
+
+    <section class="section split-section" id="submissions" aria-labelledby="submissions-title">
+      <div class="submission-panel">
+        <p class="section-label">Call for papers</p>
+        <h2 id="submissions-title">We invite concise, discussion-oriented workshop submissions.</h2>
+        <p>Submissions should follow the official UbiComp/ISWC 2026 workshop paper template and formatting instructions. Accepted workshop papers are planned for inclusion in the ACM Digital Library and UbiComp/ISWC 2026 adjunct proceedings, subject to the official publication requirements of the conference.</p>
+        <div class="submission-actions">
+          <a class="button button-dark" href="Call%20for%20Papers.pdf">Download CFP PDF</a>
+          <a class="button button-light" href="https://new.precisionconference.com/user/login" target="_blank" rel="noopener">Submit via PCS</a>
+        </div>
+      </div>
+      <div class="submission-types" aria-label="Submission types">
+        <article>
+          <h3>Position papers</h3>
+          <p>2-4 pages presenting viewpoints, challenges, or future research directions.</p>
+        </article>
+        <article>
+          <h3>Work-in-progress papers</h3>
+          <p>2-4 pages describing ongoing research, early findings, systems, or studies.</p>
+        </article>
+        <article>
+          <h3>Interactive demos</h3>
+          <p>2-4 pages describing prototypes, toolkits, datasets, or sensing systems.</p>
+        </article>
+        <article>
+          <h3>Provocation papers</h3>
+          <p>1-2 pages presenting critical, speculative, or discussion-provoking ideas.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-light" id="dates" aria-labelledby="dates-title">
+      <div class="date-layout">
+        <div>
+          <p class="section-label">Important dates</p>
+          <h2 id="dates-title">All deadlines are 23:59 AoE.</h2>
+        </div>
+        <div class="date-list">
+          <div class="date-item">
+            <span>May 5, 2026</span>
+            <strong>Call for Papers released</strong>
+          </div>
+          <div class="date-item pending">
+            <span>TBD</span>
+            <strong>Submission deadline</strong>
+          </div>
+          <div class="date-item pending">
+            <span>TBD</span>
+            <strong>Notification to authors</strong>
+          </div>
+          <div class="date-item pending">
+            <span>TBD</span>
+            <strong>Camera-ready deadline</strong>
+          </div>
+          <div class="date-item">
+            <span>October 11 or 12, 2026</span>
+            <strong>Workshop</strong>
+          </div>
+          <div class="date-item">
+            <span>October 13-15, 2026</span>
+            <strong>Main conference</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="format" aria-labelledby="format-title">
+      <div class="section-heading">
+        <p class="section-label">Workshop format</p>
+        <h2 id="format-title">Designed for focused discussion, synthesis, and collaboration.</h2>
+      </div>
+      <div class="format-timeline">
+        <article>
+          <span>Opening</span>
+          <h3>Motivation and agenda setting</h3>
+          <p>Organizers introduce the workshop goals, expected outcomes, and shared questions around gaze and neural sensing.</p>
+        </article>
+        <article>
+          <span>Perspectives</span>
+          <h3>Short talks and invited reflections</h3>
+          <p>Accepted submissions and invited perspectives frame current progress, technical barriers, and application opportunities.</p>
+        </article>
+        <article>
+          <span>Breakouts</span>
+          <h3>Thematic group discussions</h3>
+          <p>Participants discuss multimodal fusion, deployment, interaction design, datasets, ethics, privacy, and future applications.</p>
+        </article>
+        <article>
+          <span>Synthesis</span>
+          <h3>Collective research roadmap</h3>
+          <p>Groups report insights and unresolved questions, then map concrete next steps for collaboration beyond the workshop.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="organizers" aria-labelledby="organizers-title">
+      <div class="section-heading">
+        <p class="section-label">Organizers</p>
+        <h2 id="organizers-title">An interdisciplinary team spanning eye tracking, BCI, VR, and interaction design.</h2>
+      </div>
+      <div class="organizer-grid">
+        <article>
+          <div class="organizer-initials" aria-hidden="true">SC</div>
+          <h3>Shiwei Cheng</h3>
+          <p>Zhejiang University of Technology</p>
+          <a href="mailto:swc@zjut.edu.cn">swc@zjut.edu.cn</a>
+        </article>
+        <article>
+          <div class="organizer-initials" aria-hidden="true">JH</div>
+          <h3>Jinghui Hu</h3>
+          <p>Lancaster University</p>
+          <a href="mailto:j.hu23@lancaster.ac.uk">j.hu23@lancaster.ac.uk</a>
+        </article>
+        <article>
+          <div class="organizer-initials" aria-hidden="true">ZD</div>
+          <h3>Zhanxun Dong</h3>
+          <p>Shanghai Jiao Tong University</p>
+          <a href="mailto:dongzx@sjtu.edu.cn">dongzx@sjtu.edu.cn</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section final-cta" id="contact" aria-labelledby="contact-title">
+      <div>
+        <p class="section-label">Contact and submission</p>
+        <h2 id="contact-title">Submit through PCS and check the CFP for author instructions.</h2>
+        <p>Please refer to the CFP PDF for the workshop scope, submission types, review process, and expected format.</p>
+      </div>
+      <div class="cta-stack">
+        <a class="button button-primary" href="https://new.precisionconference.com/user/login" target="_blank" rel="noopener">Submit via PCS</a>
+        <a class="button button-secondary" href="Call%20for%20Papers.pdf">Read the CFP</a>
+        <span class="status-note">Workshop email: TBD</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Eye Tracking and Brain-Computer Interfaces in AR/VR: Progresses, Challenges and Opportunities. Workshop at ACM UbiComp/ISWC 2026.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+      navLinks.classList.toggle('is-open');
+    });
+  </script>
+</body>
+</html>
