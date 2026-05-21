@@ -683,36 +683,6 @@ a {
   font-size: 1rem;
 }
 
-.date-item.pending span,
-.date-item.proposed span {
-  color: var(--coral);
-}
-
-.date-status {
-  display: inline-flex;
-  align-items: center;
-  min-height: 24px;
-  padding: 4px 8px;
-  border-radius: 999px;
-  font-size: 0.72rem;
-  font-style: normal;
-  font-weight: 850;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.date-status.official {
-  color: #07695f;
-  background: rgba(34, 185, 154, 0.14);
-  border: 1px solid rgba(34, 185, 154, 0.28);
-}
-
-.date-status.proposed {
-  color: #a33f2b;
-  background: rgba(240, 111, 85, 0.12);
-  border: 1px solid rgba(240, 111, 85, 0.28);
-}
-
 .schedule-list {
   display: grid;
   grid-template-columns: 1fr;
