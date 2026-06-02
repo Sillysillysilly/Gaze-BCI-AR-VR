@@ -672,9 +672,9 @@ a {
 
 .pcs-route li {
   display: grid;
-  grid-template-columns: 34px minmax(116px, 0.46fr) minmax(0, 1fr);
+  grid-template-columns: 34px minmax(0, 1fr);
   gap: 10px;
-  align-items: center;
+  align-items: start;
   padding: 10px 12px;
   color: var(--ink-soft);
   border: 1px solid rgba(197, 209, 223, 0.80);
@@ -696,19 +696,24 @@ a {
   border-radius: var(--radius-sm);
   font-size: 0.76rem;
   font-weight: 850;
+  grid-row: 1 / span 2;
 }
 
 .pcs-route span {
+  grid-column: 2;
   color: var(--muted);
   font-size: 0.8rem;
   font-weight: 850;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 
 .pcs-route strong {
+  grid-column: 2;
   min-width: 0;
   color: var(--ink);
   font-size: 0.94rem;
+  line-height: 1.32;
   overflow-wrap: anywhere;
 }
 
@@ -1045,20 +1050,6 @@ a.status-note:focus-visible {
   .hero-actions,
   .submission-actions {
     flex-direction: column;
-  }
-
-  .pcs-route li {
-    grid-template-columns: 34px minmax(0, 1fr);
-    align-items: start;
-  }
-
-  .pcs-route li::before {
-    grid-row: 1 / span 2;
-  }
-
-  .pcs-route span,
-  .pcs-route strong {
-    grid-column: 2;
   }
 
   .button {
