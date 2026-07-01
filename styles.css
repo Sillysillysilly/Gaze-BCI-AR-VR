@@ -755,6 +755,28 @@ a {
   font-weight: 800;
 }
 
+.date-change {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.date-change span {
+  font-weight: 800;
+}
+
+.date-old {
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  text-decoration-color: rgba(240, 111, 85, 0.86);
+}
+
+.date-new {
+  color: var(--blue);
+}
+
 .date-item strong {
   display: flex;
   flex-wrap: wrap;
